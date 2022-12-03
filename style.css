@@ -1,10 +1,11 @@
 /*** CUSTOM PROPERTIES ***/
 
 :root {
-    --red: #e53d00;
+    --red: #E53D22;
     --white: #fcfff7;
     --gray: #7e7f83;
     --black: #14110f;
+    --yellow: #FFCE47;
 }
 
 /*** BASE RESET ***/
@@ -65,7 +66,7 @@ body {
 h1, 
 h2 {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-weight: 200;
     text-align: center;
     width: 100%;
 }
@@ -137,12 +138,15 @@ img {
 /*** WELCOME SECTION ***/
 
 .welcome-section {
+    background-color: var(--black);
+    background-image: linear-gradient(62deg, #231D1A 0%, var(--black) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
+    color: var(--yellow);
 }
 
 /*** PROJECT SECTION ***/
