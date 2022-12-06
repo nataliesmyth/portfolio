@@ -191,8 +191,8 @@ footer {
       display: flex;
       justify-content: space-between;
       padding: 2rem;
-      background: var(--gray);
-      border-top: 4px solid var(--red);
+      background: var(--red);
+      border-top: 4px solid var(--grey);
 }
 footer p {
       margin: 0rem;
@@ -201,6 +201,6 @@ footer p {
       /* align-items: center; */
 }
 footer a {
-      color: var(--red);
+      color: var(--white);
       text-decoration: underline;
 }
