@@ -63,6 +63,7 @@ body {
     line-height: 1.4;
     color: var(--gray);
 }
+
 h1, 
 h2 {
     font-family: 'Raleway', sans-serif;
@@ -151,17 +152,47 @@ img {
     color: var(--yellow);
 }
 
+/*** ABOUT SECTION ***/
+.abt-section {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10rem 2rem;
+}
+
+.abt-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid;
+}
+
+.abt-blurb {
+    padding: 5rem 30rem;
+    font-size: 2rem;
+}
+
 /*** PROJECT SECTION ***/
 
 .projects-section {
+    background-color: var(--black);
+    background-image: linear-gradient(62deg, #231D1A 0%, var(--black) 100%);
     text-align: center;
     padding: 10rem 2rem;
 }
+
+.projects-section h2 {
+    color: var(--white)
+}
+
 .projects-section-header {
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid;
 }
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -176,16 +207,58 @@ img {
     border-radius: 2px;
 }
 .project-image {
-      height: calc(100% - 6.8rem);
-      width: 100%;
-      object-fit: cover;
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-title {
+    padding-top: 2rem;
 }
 
 .code {
     color: var(--gray);
 }
 
+/*** CONTACT SECTION ***/
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    padding: 10rem 2rem;
+}
+
+.contact-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-section a {
+    color: var(--red);
+    font-size: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
 /*** FOOTER ***/
+
 footer {
       font-weight: 300;
       display: flex;
