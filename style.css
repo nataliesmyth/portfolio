@@ -232,10 +232,8 @@ img {
     padding: 10rem 2rem;
 }
 
-.contact-section-header {
-    max-width: 640px;
-    margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid;
+.contact-section-header h2 {
+    font-size: 6rem;
 }
 
 .contact-links {
@@ -262,18 +260,11 @@ img {
 footer {
       font-weight: 300;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       padding: 2rem;
       background: var(--red);
-      border-top: 4px solid var(--grey);
 }
 footer p {
-      margin: 0rem;
+      /* margin: 0rem; */
       color: var(--white);
-      /* display: flex; */
-      /* align-items: center; */
-}
-footer a {
-      color: var(--white);
-      text-decoration: underline;
 }
