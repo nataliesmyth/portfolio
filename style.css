@@ -181,6 +181,7 @@ img {
     background-image: linear-gradient(62deg, #231D1A 0%, var(--black) 100%);
     text-align: center;
     padding: 10rem 2rem;
+    height: 100vh;
 }
 
 .projects-section h2 {
