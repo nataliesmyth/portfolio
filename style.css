@@ -114,7 +114,7 @@ img {
 .nav-list {
     display: flex;
     /* list-style: none; */
-    margin-right: 2em;
+    /* margin-right: 2em; */
 }
 .nav-list a {
     display: block;
@@ -123,8 +123,16 @@ img {
     font-weight: 100;
 }
 
+.nav-list a:hover {
+    padding-bottom: 1rem;
+    /* text-decoration: underline; */
+    background-color: var(--white);
+    color: var(--red);
+    border-radius: 20%;
+}
+
 .logo {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
     font-weight: 700;
     padding: 1rem;
 }
