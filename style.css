@@ -129,6 +129,12 @@ img {
     padding: 1rem;
 }
 
+@media screen and (max-width: 1180px) {
+    .nav {
+        justify-content: space-between;
+    }
+}
+
 @media screen and (max-width: 430px) {
     .nav {
         justify-content: center;
