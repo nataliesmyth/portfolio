@@ -279,7 +279,14 @@ footer {
       padding: 2rem;
       background: var(--red);
 }
+
 footer p {
       /* margin: 0rem; */
+      font-size: 3rem;
       color: var(--white);
+}
+
+.copyright {
+    /* font-size: 4rem; */
+    font-weight: 700;
 }
