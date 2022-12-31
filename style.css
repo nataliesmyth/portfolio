@@ -156,7 +156,7 @@ img {
 
 .welcome-section {
     background-color: var(--black);
-    background-image: linear-gradient(62deg, #231D1A 0%, var(--black) 100%);
+    background-image: linear-gradient(62deg, #47606e 10%, var(--black) 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,7 +185,7 @@ img {
 
 .abt-blurb {
     padding: 5rem 30rem;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 /*** PROJECT SECTION ***/
