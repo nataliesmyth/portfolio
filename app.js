@@ -50,8 +50,8 @@ var TxtRotate = function(el, toRotate, period) {
       }
     }
     // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
+    let css = document.createElement("style");
+    // css.type = "text/css";
     css.innerHTML = ".typing-text > .wrap { border-right: 0.08em solid #F26921 }";
     document.body.appendChild(css);
   };
