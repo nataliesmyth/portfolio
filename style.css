@@ -186,10 +186,10 @@ img {
 .abt-section {
     background-image: linear-gradient(-32deg, var(--yellow) 10%, var(--white) 100%);
     background-color: var(--white);
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 100vh;
     padding: 10rem 2rem;
 }
@@ -201,19 +201,24 @@ img {
 }
 
 .abt-blurb {
+    overflow: hidden;
     padding: 5rem 30rem;
     font-size: 3rem;
 }
 
+@media (max-width: 1237px) {
+    .abt-blurb {
+        padding: 5rem 0rem;
+    }
+}
 /*** PROJECT SECTION ***/
 
 .projects-section {
     background-color: var(--black);
     background-image: linear-gradient(62deg, #47606e 10%, var(--black) 100%);
-
     text-align: center;
     padding: 10rem 2rem;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .projects-section h2 {
@@ -226,19 +231,37 @@ img {
     border-bottom: 0.2rem solid;
 }
 
+@media (max-width: 28.75em) {
+    .projects-section-header {
+        font-size: 4rem;
+    }
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 4rem;
+    gap: 4rem;
     width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
     margin-bottom: 6rem;
 }
+
+@media (max-width: 30.625em) {
+    .projects-section {
+        padding: 6rem 1rem;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .project {
     background: var(--gray);
     box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
     border-radius: 2px;
 }
+
 .project-image {
     height: calc(100% - 6.8rem);
     width: 100%;
@@ -246,7 +269,8 @@ img {
 }
 
 .project-title {
-    padding-top: 2rem;
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
 }
 
 .code {
@@ -267,8 +291,9 @@ img {
     padding: 0rem 2rem;
 }
 
-.contact-section-header h2 {
+.contact-section-header > h2 {
     font-size: 6rem;
+    text-shadow: 2px 2px 1px #dcded8;
 }
 
 .contact-links {
