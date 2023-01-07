@@ -211,6 +211,12 @@ img {
         padding: 5rem 0rem;
     }
 }
+
+@media (max-width: 600px) {
+    .abt-blurb {
+    font-size: 2.5rem;
+    }
+}
 /*** PROJECT SECTION ***/
 
 .projects-section {
