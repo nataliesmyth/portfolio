@@ -190,7 +190,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    height: 100vh;
+    /* height: 100vh; */
     padding: 10rem 2rem;
 }
 
@@ -330,17 +330,19 @@ img {
 /*** FOOTER ***/
 
 footer {
-      font-weight: 300;
-      display: flex;
-      justify-content: center;
-      padding: 2rem;
-      background: var(--red);
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--yellow);
+    border-top: 5px solid var(--red);
 }
 
 footer p {
-      /* margin: 0rem; */
-      font-size: 3rem;
-      color: var(--white);
+    /* margin: 0rem; */
+    font-size: 2rem;
+    color: var(--black);
+    font-weight: 500;
 }
 
 .copyright {
