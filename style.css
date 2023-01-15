@@ -298,6 +298,7 @@ img {
 }
 
 .contact-section-header > h2 {
+    color: var(--gray);
     font-size: 6rem;
     text-shadow: 2px 2px 1px #dcded8;
 }
@@ -312,7 +313,7 @@ img {
 }
 
 .contact-section a {
-    color: var(--red);
+    color: var(--gray);
     font-size: 3rem;
 }
 
@@ -334,14 +335,14 @@ footer {
     display: flex;
     justify-content: center;
     padding: 2rem;
-    background: var(--yellow);
-    border-top: 5px solid var(--red);
+    background: var(--red);
+    /* border-top: 5px solid var(--red); */
 }
 
 footer p {
     /* margin: 0rem; */
     font-size: 2rem;
-    color: var(--black);
+    color: var(--white);
     font-weight: 500;
 }
 
