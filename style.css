@@ -152,6 +152,12 @@ img {
   }
 }
 
+@media screen and (max-width: 400px) {
+    .logo {
+        display: none;
+    }
+}
+
 /*** WELCOME SECTION ***/
 
 .welcome-section {
@@ -305,7 +311,9 @@ img {
 
 .contact-links {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    text-align: left;
     width: 100%;
     max-width: 980px;
     margin-top: 4rem;
