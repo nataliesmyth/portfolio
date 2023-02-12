@@ -311,10 +311,10 @@ img {
 
 .contact-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-content: center;
     text-align: left;
-    width: 100%;
+    /* width: 100%; */
     max-width: 980px;
     margin-top: 4rem;
     flex-wrap: wrap;
