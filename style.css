@@ -15,7 +15,6 @@
     padding: 0;
 }
 
-/*** BOX SIZE & FONT SIZE ***/
 *,
 *::before,
 *::after {
@@ -24,36 +23,28 @@
 
 html {
     box-sizing: border-box;
-      /* set font size for easy rem calculations */
-      /* 62.5% equals 10px */
-      /* default doc font size: 16px, 1rem = 16px, (100% / 16px) * 10 = 62.5%, 1rem = 10px */
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-/* Use media queries to set font sizes on different screens and automate responsiveness */
-/* make sure to use rem units for size values, margin, and padding */
-/* use em for breakpoints */
-/* calculation: screen size divided any browser base font */
-/* 980px / 16px = 61.25em */
-/* 1200px / 16px = 75em */
 @media (max-width: 75em) {
     html {
         font-size: 60%;
   }
 }
-/* 980px / 16px = 61.25em */
+
 @media (max-width: 61.25em) {
       html {
         font-size: 58%;
   }
 }
-/* 460px / 16px = 28.75em */
+
 @media (max-width: 28.75em) {
       html {
         font-size: 55%;
   }
 }
+
 /*** BASE STYLES ***/
 
 body {
@@ -113,9 +104,8 @@ img {
 
 .nav-list {
     display: flex;
-    /* list-style: none; */
-    /* margin-right: 2em; */
 }
+
 .nav-list a {
     display: block;
     font-size: 2rem;
@@ -125,7 +115,6 @@ img {
 
 .nav-list a:hover {
     padding-bottom: 1rem;
-    /* text-decoration: underline; */
     background-color: var(--white);
     color: var(--red);
     border-radius: 20%;
@@ -178,7 +167,7 @@ img {
 }
 
 .typing-text {
-    width: 29rem;
+    /* width: 29rem; */
     /* animation: typing 2s steps(22), blink .5s step-end infinite alternate; */
     white-space: nowrap;
     overflow: hidden;
@@ -186,17 +175,12 @@ img {
     font-family: monospace;
     font-size: 2rem;
     justify-content: flex-end;
-  }
+}
 
 /*** ABOUT SECTION ***/
 .abt-section {
     background-image: linear-gradient(-32deg, var(--yellow) 10%, var(--white) 100%);
     background-color: var(--white);
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    /* height: 100vh; */
     padding: 10rem 2rem;
 }
 
@@ -230,7 +214,6 @@ img {
     background-image: linear-gradient(62deg, #47606e 10%, var(--black) 100%);
     text-align: center;
     padding: 10rem 2rem;
-    /* height: 100vh; */
 }
 
 .projects-section h2 {
@@ -344,17 +327,14 @@ footer {
     justify-content: center;
     padding: 2rem;
     background: var(--red);
-    /* border-top: 5px solid var(--red); */
 }
 
 footer p {
-    /* margin: 0rem; */
     font-size: 2rem;
     color: var(--white);
     font-weight: 500;
 }
 
 .copyright {
-    /* font-size: 4rem; */
     font-weight: 700;
 }
