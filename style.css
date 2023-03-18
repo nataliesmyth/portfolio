@@ -1,28 +1,19 @@
-/*** CUSTOM PROPERTIES ***/
-
 :root {
-    --red: #E53D22;
+    --red: #E4572E;
     --white: #fcfff7;
     --gray: #7e7f83;
     --black: #14110f;
     --yellow: #E2EF70;
 }
 
-/*** BASE RESET ***/
-
-* {
-    margin:0;
-    padding: 0;
-}
-
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+    box-sizing: border-box;
+    margin: 0;
 }
 
 html {
-    box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
@@ -44,8 +35,6 @@ html {
         font-size: 55%;
   }
 }
-
-/*** BASE STYLES ***/
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -99,7 +88,8 @@ img {
     background-color: var(--red);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0,4);
     z-index: 10;
-    padding: 1rem;
+    padding: 1.5em;
+    line-height: 0;
 }
 
 .nav-list {
@@ -109,21 +99,21 @@ img {
 .nav-list a {
     display: block;
     font-size: 2rem;
-    padding: 1rem;
+    padding: 0 1em;
     font-weight: 100;
 }
 
 .nav-list a:hover {
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     background-color: var(--white);
-    color: var(--red);
-    border-radius: 20%;
+    /* color: var(--red); */
+    border-radius: 10%;
 }
 
 .logo {
     font-size: 2.7rem;
     font-weight: 700;
-    padding: 1rem;
+    padding: 0 1em;
 }
 
 @media screen and (max-width: 1180px) {
@@ -179,34 +169,25 @@ img {
 
 /*** ABOUT SECTION ***/
 .abt-section {
-    background-image: linear-gradient(-32deg, var(--yellow) 10%, var(--white) 100%);
-    background-color: var(--white);
-    padding: 10rem 2rem;
+    /* background-image: linear-gradient(-32deg, var(--yellow) 10%, var(--white) 100%); */
+    background-color: #f5f1ed;
+    padding: 3em;
 }
 
 .abt-section-header {
     max-width: 640px;
-    margin: 0 auto 6rem auto;
-    border-bottom: 0.2rem solid;
+    margin: 0 auto;
+    border-bottom: 0.01em solid;
 }
 
 .abt-blurb {
     overflow: hidden;
-    padding: 5rem 30rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2em 0;
     font-size: 2rem;
 }
 
-@media (max-width: 1237px) {
-    .abt-blurb {
-        padding: 5rem 0rem;
-    }
-}
-
-@media (max-width: 600px) {
-    .abt-blurb {
-    font-size: 2rem;
-    }
-}
 /*** PROJECT SECTION ***/
 
 .projects-section {
@@ -275,7 +256,7 @@ img {
 /*** CONTACT SECTION ***/
 
 .contact-section {
-    background-color: var(--yellow);
+    background-color: #f5f1ed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -287,9 +268,9 @@ img {
 }
 
 .contact-section-header > h2 {
-    color: var(--gray);
+    color: var(--red);
     font-size: 6rem;
-    text-shadow: 2px 2px 1px #dcded8;
+    text-shadow: 2px 2px 1px #c4c6c1;
 }
 
 .contact-links {
@@ -297,20 +278,19 @@ img {
     flex-direction: row;
     align-content: center;
     text-align: left;
-    /* width: 100%; */
     max-width: 980px;
     margin-top: 4rem;
     flex-wrap: wrap;
 }
 
 .contact-section a {
-    color: var(--gray);
+    color: var(--red);
     font-size: 3rem;
 }
 
 .contact-details {
     font-size: 2.4rem;
-    text-shadow: 2px 2px 1px #dcded8;
+    text-shadow: 2px 2px 1px #c4c6c1;
     transition: transform 0.3s ease-out;
 }
 
@@ -319,6 +299,12 @@ img {
     padding: 1rem 2rem;
     border-radius: 2px;
 }
+
+@media screen and (max-width: 800px) {
+    .contact-links {
+        flex-direction: column;
+    }
+}
 /*** FOOTER ***/
 
 footer {
@@ -326,7 +312,7 @@ footer {
     display: flex;
     justify-content: center;
     padding: 2rem;
-    background: var(--red);
+    background: #252323;
 }
 
 footer p {
