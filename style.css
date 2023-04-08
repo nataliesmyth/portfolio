@@ -53,6 +53,10 @@ img {
     max-width: 100%;
 }
 
+.col {
+    padding: 0 0 0 1em;
+}
+
 /*** NAVIGATION ***/
 
 .nav {
@@ -73,12 +77,12 @@ img {
 .nav-list a {
     /* display: block; */
     font-size: 1rem;
-    padding: 1em;
+    padding: 0.75em;
     font-weight: 100;
 }
 
 .nav-list a:hover {
-    padding-bottom: 1em;
+    /* padding-bottom: 1em; */
     background-color: var(--white);
     color: var(--red);
     border-radius: 10%;
@@ -138,8 +142,27 @@ img {
 
 /*** PROJECT SECTION ***/
 
+.project-title a {
+    color: var(--black);
+}
 
+.project-card {
+    background-color: var(--red);
+    list-style: none;
+    border-radius: 5px;
+    padding: .5em;
+    margin: .5em;
+    position: relative;
+}
 
+.project-image {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    opacity: .1;
+    max-height: 100%;
+    object-fit: cover;
+}
 
 /*** CONTACT SECTION ***/
 
