@@ -162,6 +162,9 @@ img {
     opacity: .1;
     max-height: 100%;
     object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*** CONTACT SECTION ***/
@@ -242,4 +245,8 @@ footer p {
     .contact-links {
         flex-direction: column;
     }
+}
+
+@media (min-width: 450px) {
+
 }
