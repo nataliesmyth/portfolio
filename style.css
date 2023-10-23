@@ -1,5 +1,7 @@
+/*** CUSTOM PROPERTIES ***/
+
 :root {
-    --red: #E4572E;
+    --red: #E53D22;
     --white: #fcfff7;
     --gray: #7e7f83;
     --black: #14110f;
@@ -68,6 +70,10 @@ img {
     width: 100%;
     background-color: var(--red);
     z-index: 10;
+<<<<<<< HEAD
+=======
+    padding: 1rem;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .nav-list {
@@ -75,23 +81,36 @@ img {
 }
 
 .nav-list a {
+<<<<<<< HEAD
     /* display: block; */
     font-size: 1rem;
     padding: 0.75em;
+=======
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     font-weight: 100;
 }
 
 .nav-list a:hover {
+<<<<<<< HEAD
     /* padding-bottom: 1em; */
     background-color: var(--white);
     color: var(--red);
     border-radius: 10%;
+=======
+    padding-bottom: 1rem;
+    background-color: var(--white);
+    color: var(--red);
+    border-radius: 20%;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .logo {
     font-size: 2rem;
     font-weight: 700;
-    padding: 0 1em;
+    padding: 1rem;
 }
 
 /*** WELCOME SECTION ***/
@@ -117,18 +136,30 @@ img {
 
 /*** ABOUT SECTION ***/
 .abt-section {
+<<<<<<< HEAD
     background-color: #f5f1ed;
     padding: 4em;
+=======
+    background-image: linear-gradient(-32deg, var(--yellow) 10%, var(--white) 100%);
+    background-color: var(--white);
+    padding: 10rem 2rem;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .abt-section-header {
     max-width: 640px;
+<<<<<<< HEAD
     margin: 0 auto;
     padding-bottom: 1em;
+=======
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .abt-blurb {
     overflow: hidden;
+<<<<<<< HEAD
     max-width: 1200px;
     margin: 0 auto;
     font-size: 2rem;
@@ -140,6 +171,23 @@ img {
     width: 85%;
 }
 
+=======
+    padding: 5rem 30rem;
+    font-size: 2rem;
+}
+
+@media (max-width: 1237px) {
+    .abt-blurb {
+        padding: 5rem 0rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .abt-blurb {
+    font-size: 2rem;
+    }
+}
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 /*** PROJECT SECTION ***/
 
 .project-title a {
@@ -170,7 +218,7 @@ img {
 /*** CONTACT SECTION ***/
 
 .contact-section {
-    background-color: #f5f1ed;
+    background-color: var(--yellow);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,26 +229,50 @@ img {
     padding: 0rem 2rem;
 }
 
+<<<<<<< HEAD
 .contact-section-header {
     font-size: 1.5rem;
     color: var(--red);
     text-shadow: 2px 2px 1px #c4c6c1;
+=======
+.contact-section-header > h2 {
+    color: var(--gray);
+    font-size: 6rem;
+    text-shadow: 2px 2px 1px #dcded8;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .contact-links {
     display: flex;
+<<<<<<< HEAD
     justify-content: center;
     align-items: center;
+=======
+    flex-direction: row;
+    align-content: center;
+    text-align: left;
+    /* width: 100%; */
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     max-width: 980px;
     flex-wrap: wrap;
 }
 
 .contact-section a {
+<<<<<<< HEAD
     color: var(--red);
 }
 
 .contact-details {
     text-shadow: 1px 1px 1px #c4c6c1;
+=======
+    color: var(--gray);
+    font-size: 3rem;
+}
+
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #dcded8;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     transition: transform 0.3s ease-out;
 }
 
@@ -209,15 +281,23 @@ img {
     padding: 1rem 2rem;
     border-radius: 2px;
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 /*** FOOTER ***/
 
 footer {
     font-weight: 300;
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     background: var(--gray);
+=======
+    padding: 2rem;
+    background: var(--red);
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 footer p {
