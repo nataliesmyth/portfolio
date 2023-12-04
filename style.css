@@ -8,13 +8,42 @@
     --yellow: #E2EF70;
 }
 
+/*** BASE RESET ***/
+
+* {
+    margin:0;
+    padding: 0;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 html {
+    box-sizing: border-box;
+    font-size: 62.5%;
     scroll-behavior: smooth;
 }
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
+      html {
+        font-size: 58%;
+  }
+}
+
+@media (max-width: 28.75em) {
+      html {
+        font-size: 55%;
+  }
+}
+
+/*** BASE STYLES ***/
 
 body {
     margin: 0;
@@ -70,10 +99,7 @@ img {
     width: 100%;
     background-color: var(--red);
     z-index: 10;
-<<<<<<< HEAD
-=======
     padding: 1rem;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .nav-list {
@@ -89,28 +115,41 @@ img {
     display: block;
     font-size: 2rem;
     padding: 1rem;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     font-weight: 100;
 }
 
 .nav-list a:hover {
-<<<<<<< HEAD
-    /* padding-bottom: 1em; */
-    background-color: var(--white);
-    color: var(--red);
-    border-radius: 10%;
-=======
     padding-bottom: 1rem;
     background-color: var(--white);
     color: var(--red);
     border-radius: 20%;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .logo {
     font-size: 2rem;
     font-weight: 700;
     padding: 1rem;
+}
+
+@media screen and (max-width: 1180px) {
+    .nav {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .nav {
+        justify-content: center;
+  }
+  .nav-list {
+        margin: 0 1em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        display: none;
+    }
 }
 
 /*** WELCOME SECTION ***/
@@ -136,42 +175,19 @@ img {
 
 /*** ABOUT SECTION ***/
 .abt-section {
-<<<<<<< HEAD
-    background-color: #f5f1ed;
-    padding: 4em;
-=======
     background-image: linear-gradient(-32deg, var(--yellow) 10%, var(--white) 100%);
     background-color: var(--white);
     padding: 10rem 2rem;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .abt-section-header {
     max-width: 640px;
-<<<<<<< HEAD
-    margin: 0 auto;
-    padding-bottom: 1em;
-=======
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .abt-blurb {
     overflow: hidden;
-<<<<<<< HEAD
-    max-width: 1200px;
-    margin: 0 auto;
-    font-size: 2rem;
-}
-
-.container {
-    max-width: 1128px;
-    margin: 0 auto;
-    width: 85%;
-}
-
-=======
     padding: 5rem 30rem;
     font-size: 2rem;
 }
@@ -180,6 +196,30 @@ img {
     .abt-blurb {
         padding: 5rem 0rem;
     }
+}
+
+@media (max-width: 600px) {
+    .abt-blurb {
+    font-size: 2rem;
+    }
+}
+/*** PROJECT SECTION ***/
+
+.projects-section {
+    background-color: var(--black);
+    background-image: linear-gradient(62deg, #47606e 10%, var(--black) 100%);
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+.projects-section h2 {
+    color: var(--white)
+}
+
+.projects-section-header {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid;
 }
 
 @media (max-width: 600px) {
@@ -229,17 +269,10 @@ img {
     padding: 0rem 2rem;
 }
 
-<<<<<<< HEAD
-.contact-section-header {
-    font-size: 1.5rem;
-    color: var(--red);
-    text-shadow: 2px 2px 1px #c4c6c1;
-=======
 .contact-section-header > h2 {
     color: var(--gray);
     font-size: 6rem;
     text-shadow: 2px 2px 1px #dcded8;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 .contact-links {
@@ -252,19 +285,11 @@ img {
     align-content: center;
     text-align: left;
     /* width: 100%; */
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     max-width: 980px;
     flex-wrap: wrap;
 }
 
 .contact-section a {
-<<<<<<< HEAD
-    color: var(--red);
-}
-
-.contact-details {
-    text-shadow: 1px 1px 1px #c4c6c1;
-=======
     color: var(--gray);
     font-size: 3rem;
 }
@@ -272,7 +297,6 @@ img {
 .contact-details {
     font-size: 2.4rem;
     text-shadow: 2px 2px 1px #dcded8;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     transition: transform 0.3s ease-out;
 }
 
@@ -281,11 +305,6 @@ img {
     padding: 1rem 2rem;
     border-radius: 2px;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 /*** FOOTER ***/
 
 footer {
@@ -297,7 +316,6 @@ footer {
 =======
     padding: 2rem;
     background: var(--red);
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 }
 
 footer p {
