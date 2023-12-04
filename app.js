@@ -1,10 +1,5 @@
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
 
-navToggle.addEventListener('click', () => {
-  nav.classList.toggle('nav--visible');
-});
-let TxtRotate = function(el, toRotate, period) {
+var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
@@ -15,8 +10,8 @@ let TxtRotate = function(el, toRotate, period) {
   };
   
   TxtRotate.prototype.tick = function() {
-    let i = this.loopNum % this.toRotate.length;
-        let fullTxt = this.toRotate[i];
+    var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
   
     if (this.isDeleting) {
       this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -26,8 +21,8 @@ let TxtRotate = function(el, toRotate, period) {
   
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
   
-    let that = this;
-    let delta = 150 - Math.random() * 100;
+    var that = this;
+    var delta = 150 - Math.random() * 100;
   
     if (this.isDeleting) { delta /= 2; }
   
@@ -37,7 +32,7 @@ let TxtRotate = function(el, toRotate, period) {
     } else if (this.isDeleting && this.txt === '') {
       this.isDeleting = false;
       this.loopNum++;
-      delta = 1000;
+      delta = 2000;
     }
   
     setTimeout(function() {
@@ -46,17 +41,17 @@ let TxtRotate = function(el, toRotate, period) {
   };
   
   window.onload = function() {
-    let elements = document.getElementsByClassName('typing-text');
-    for (let i=0; i<elements.length; i++) {
-      let toRotate = elements[i].getAttribute('data-rotate');
-      let period = elements[i].getAttribute('data-period');
+    var elements = document.getElementsByClassName('typing-text');
+    for (var i=0; i<elements.length; i++) {
+      var toRotate = elements[i].getAttribute('data-rotate');
+      var period = elements[i].getAttribute('data-period');
       if (toRotate) {
         new TxtRotate(elements[i], JSON.parse(toRotate), period);
       }
     }
     // INJECT CSS
-    let css = document.createElement("style");
-    // css.type = "text/css";
+    var css = document.createElement("style");
+    css.type = "text/css";
     css.innerHTML = ".typing-text > .wrap { border-right: 0.08em solid #F26921 }";
     document.body.appendChild(css);
   };

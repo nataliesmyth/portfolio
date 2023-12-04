@@ -8,39 +8,82 @@
     --yellow: #E2EF70;
 }
 
-/*** BASE RESET ***/
-
-* {
-    margin:0;
-    padding: 0;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 1rem;
     scroll-behavior: smooth;
-}
-
-@media (max-width: 75em) {
-    html {
-        font-size: 60%;
-  }
-}
-
-@media (max-width: 61.25em) {
-      html {
-        font-size: 58%;
-  }
-}
-
-@media (max-width: 28.75em) {
-      html {
-        font-size: 55%;
-  }
 }
 
 /*** BASE STYLES ***/
@@ -63,7 +106,7 @@ h1, h2 {
 
 h1 {
     color: var(--white);
-    font-size: 2.5rem;
+    font-size: 6rem;
 }
 
 h2 {
@@ -75,7 +118,7 @@ ul {
     list-style: none;
 }
 
-a {
+.nav a {
     text-decoration: none;
     color: var(--white);
 }
@@ -107,11 +150,6 @@ img {
 }
 
 .nav-list a {
-<<<<<<< HEAD
-    /* display: block; */
-    font-size: 1rem;
-    padding: 0.75em;
-=======
     display: block;
     font-size: 2rem;
     padding: 1rem;
@@ -170,7 +208,7 @@ img {
     white-space: nowrap;
     overflow: hidden;
     font-family: monospace;
-    font-size: 1.25rem;
+    font-size: 2rem;
 }
 
 /*** ABOUT SECTION ***/
@@ -227,7 +265,6 @@ img {
     font-size: 2rem;
     }
 }
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
 /*** PROJECT SECTION ***/
 
 .project-title a {
@@ -271,16 +308,14 @@ img {
 
 .contact-section-header > h2 {
     color: var(--gray);
-    font-size: 6rem;
+    font-size: 3rem;
     text-shadow: 2px 2px 1px #dcded8;
 }
 
 .contact-links {
     display: flex;
-<<<<<<< HEAD
     justify-content: center;
     align-items: center;
-=======
     flex-direction: row;
     align-content: center;
     text-align: left;
@@ -311,9 +346,7 @@ footer {
     font-weight: 300;
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     background: var(--gray);
-=======
     padding: 2rem;
     background: var(--red);
 }
