@@ -10,136 +10,16 @@
 
 /*** BASE RESET ***/
 
-* {
-    margin:0;
-    padding: 0;
-}
-
-/*** BASE RESET ***/
-* {
-    margin:0;
-    padding: 0;
-}
-
-<<<<<<< HEAD
-/* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-html {
-    font-size: 1rem;
-=======
-/*** BASE RESET ***/
-
-* {
-    margin:0;
-    padding: 0;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
-html {
     box-sizing: border-box;
-    font-size: 62.5%;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
-    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
-
-@media (max-width: 75em) {
-    html {
-        font-size: 60%;
-  }
-}
-
-@media (max-width: 61.25em) {
-      html {
-        font-size: 58%;
-  }
-}
-
-@media (max-width: 28.75em) {
-      html {
-        font-size: 55%;
-  }
-}
-
-/*** BASE STYLES ***/
 
 body {
-    margin: 0;
+    scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     line-height: 1.6;
@@ -154,11 +34,6 @@ h1, h2 {
     line-height: 1.1;
 }
 
-h1 {
-    color: var(--white);
-    font-size: 6rem;
-}
-
 h2 {
     color: var(--red);
     /* font-size: 2rem; */
@@ -166,6 +41,12 @@ h2 {
 
 ul {
     list-style: none;
+}
+
+.heading {
+    padding-block: 1em;
+    color: var(--white);
+    font-size: 2.25rem;
 }
 
 .nav a {
@@ -201,7 +82,6 @@ img {
 
 .nav-list a {
     display: block;
-    font-size: 2rem;
     padding: 1rem;
     font-weight: 100;
 }
@@ -229,9 +109,6 @@ img {
     .nav {
         justify-content: center;
   }
-  .nav-list {
-        margin: 0 1em;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -249,7 +126,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
     color: var(--yellow);
 }
@@ -258,7 +135,7 @@ img {
     white-space: nowrap;
     overflow: hidden;
     font-family: monospace;
-    font-size: 2rem;
+    font-size: 1rem
 }
 
 /*** ABOUT SECTION ***/
@@ -272,6 +149,7 @@ img {
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid;
+    padding-block-end: 1em;
 }
 
 .abt-blurb {
@@ -308,6 +186,7 @@ img {
     max-width: 640px;
     margin: 0 auto 6rem auto;
     border-bottom: 0.2rem solid;
+    padding-block-end: 1em;
 }
 
 @media (max-width: 600px) {
@@ -321,6 +200,11 @@ img {
     color: var(--black);
 }
 
+.project-title {
+    color: var(--white);
+    padding-block: 1em;
+}
+
 .project-card {
     background-color: var(--red);
     list-style: none;
@@ -331,10 +215,6 @@ img {
 }
 
 .project-image {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    opacity: .1;
     max-height: 100%;
     object-fit: cover;
     display: flex;
@@ -357,34 +237,27 @@ img {
 }
 
 .contact-section-header > h2 {
+    font-size: 36px;
+    padding-block: 1em;
     color: var(--gray);
-    color: var(--gray);
-<<<<<<< HEAD
-    font-size: 3rem;
-=======
-    font-size: 6rem;
     text-shadow: 2px 2px 1px #dcded8;
 }
 
 .contact-links {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    align-content: center;
+    flex-direction: column;
+    align-content: flex-start;
     text-align: left;
-    /* width: 100%; */
     max-width: 980px;
     flex-wrap: wrap;
 }
 
 .contact-section a {
     color: var(--gray);
-    font-size: 3rem;
 }
 
 .contact-details {
-    font-size: 2.4rem;
     text-shadow: 2px 2px 1px #dcded8;
     transition: transform 0.3s ease-out;
 }
