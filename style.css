@@ -8,6 +8,19 @@
     --yellow: #E2EF70;
 }
 
+/*** BASE RESET ***/
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+/*** BASE RESET ***/
+* {
+    margin:0;
+    padding: 0;
+}
+
 <<<<<<< HEAD
 /* Box sizing rules */
 *,
@@ -105,7 +118,23 @@ html {
     scroll-behavior: smooth;
 }
 
-/*** BASE STYLES ***/
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
+      html {
+        font-size: 58%;
+  }
+}
+
+@media (max-width: 28.75em) {
+      html {
+        font-size: 55%;
+  }
+}
 
 /*** BASE STYLES ***/
 
@@ -329,11 +358,11 @@ img {
 
 .contact-section-header > h2 {
     color: var(--gray);
+    color: var(--gray);
 <<<<<<< HEAD
     font-size: 3rem;
 =======
     font-size: 6rem;
->>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     text-shadow: 2px 2px 1px #dcded8;
 }
 
