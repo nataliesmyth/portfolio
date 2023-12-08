@@ -8,6 +8,7 @@
     --yellow: #E2EF70;
 }
 
+<<<<<<< HEAD
 /* Box sizing rules */
 *,
 *::before,
@@ -83,8 +84,28 @@ textarea:not([rows]) {
 
 html {
     font-size: 1rem;
+=======
+/*** BASE RESET ***/
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     scroll-behavior: smooth;
 }
+
+/*** BASE STYLES ***/
 
 /*** BASE STYLES ***/
 
@@ -308,7 +329,11 @@ img {
 
 .contact-section-header > h2 {
     color: var(--gray);
+<<<<<<< HEAD
     font-size: 3rem;
+=======
+    font-size: 6rem;
+>>>>>>> parent of 868b4f8 (layout adjustments and color correction)
     text-shadow: 2px 2px 1px #dcded8;
 }
 
