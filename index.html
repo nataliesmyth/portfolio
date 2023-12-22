@@ -23,7 +23,7 @@
               <div class="hamburger-line"></div>
               <div class="hamburger-line"></div>
             </div>
-            <ul class="nav-list">
+            <ul class="nav-list hidden">
               <li><a href=#home>Home</a></li>
               <li><a href=#abt>About</a></li>
               <li><a href=#projects>Projects</a></li>
@@ -38,8 +38,10 @@
         <h1 class="title">Natalie Smyth</h1>
         <div class="line"></div>
         <p class="hero-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis iure, vel ullam quam suscipit itaque. Veritatis veniam illo magni distinctio suscipit. Odit asperiores quo culpa. Quibusdam eos qui magni? Explicabo.</p>
-        <a class="hero-btn" href="#">Projects</a>
-        <a class="hero-btn hero-btn-dark" href="#">Contact</a>
+        <div class="hero-btns">
+          <a class="hero-btn" href="#">Projects</a>
+          <a class="hero-btn hero-btn-dark" href="#">Contact</a>
+        </div>
       </section>
 
       <!-- <section id="abt" class="abt-section">
@@ -59,10 +61,86 @@
 
         <section class="section projects-section">
           <h2 class="section-heading">Projects</h2>
-          <div class="col">
+          <div class="project-grid">
               <div class="project-card">
                   <div class="project-image">
-                    <a href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
+                    <img class="mobile-screen" src="./images/space-force-screenshot.png" alt="">
+                    <img class="small-tablet-screen" src="./images/space-force-large-screen.png" alt="">
+                  </div>
+                  <h3 class="project-title">Space Tourism</h3>
+                  <div class="line"></div>
+                  <div class="project-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
+                  </div>
+                  <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>STACK</span>
+                  </div>
+                  <div class="project-links">
+                      <a href="https://nataliesmyth.github.io/FEM-space-tourism-website/" aria-label="Github Link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path d="M17.5003 2.91667C15.5852 2.91667 13.6889 3.29388 11.9195 4.02676C10.1502 4.75964 8.54254 5.83384 7.18835 7.18803C4.45345 9.92294 2.91699 13.6323 2.91699 17.5C2.91699 23.9458 7.10241 29.4146 12.892 31.3542C13.6212 31.4708 13.8545 31.0188 13.8545 30.625V28.1604C9.81491 29.0354 8.95449 26.2063 8.95449 26.2063C8.28366 24.5146 7.33574 24.0625 7.33574 24.0625C6.00866 23.1583 7.43783 23.1875 7.43783 23.1875C8.89616 23.2896 9.66908 24.6896 9.66908 24.6896C10.9378 26.9063 13.0816 26.25 13.9128 25.9C14.0441 24.9521 14.4232 24.3104 14.8316 23.9458C11.5941 23.5813 8.19616 22.3271 8.19616 16.7708C8.19616 15.1521 8.75033 13.8542 9.69824 12.8188C9.55241 12.4542 9.04199 10.9375 9.84408 8.96876C9.84408 8.96876 11.0691 8.57501 13.8545 10.4563C15.0066 10.1354 16.2607 9.97501 17.5003 9.97501C18.7399 9.97501 19.9941 10.1354 21.1462 10.4563C23.9316 8.57501 25.1566 8.96876 25.1566 8.96876C25.9587 10.9375 25.4482 12.4542 25.3024 12.8188C26.2503 13.8542 26.8045 15.1521 26.8045 16.7708C26.8045 22.3417 23.392 23.5667 20.1399 23.9313C20.6649 24.3833 21.1462 25.2729 21.1462 26.6292V30.625C21.1462 31.0188 21.3795 31.4854 22.1232 31.3542C27.9128 29.4 32.0837 23.9458 32.0837 17.5C32.0837 15.5849 31.7065 13.6885 30.9736 11.9192C30.2407 10.1499 29.1665 8.54222 27.8123 7.18803C26.4581 5.83384 24.8505 4.75964 23.0811 4.02676C21.3118 3.29388 19.4154 2.91667 17.5003 2.91667Z" fill="#111111"/>
+                      </svg></a>
+                      <a href="https://nataliesmyth.github.io/FEM-space-tourism-website/" class="external" aria-label="External Link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path d="M17.0082 7.16406L19.7426 4.42968C20.4536 3.7187 21.2976 3.15471 22.2266 2.76993C23.1555 2.38515 24.1512 2.1871 25.1566 2.1871C26.1621 2.1871 27.1578 2.38515 28.0867 2.76993C29.0157 3.15471 29.8597 3.7187 30.5707 4.42968C31.2817 5.14067 31.8457 5.98473 32.2305 6.91367C32.6152 7.84262 32.8133 8.83826 32.8133 9.84374C32.8133 10.8492 32.6152 11.8449 32.2305 12.7738C31.8457 13.7028 31.2817 14.5468 30.5707 15.2578L25.102 20.7266C24.391 21.4376 23.5469 22.0016 22.618 22.3864C21.689 22.7712 20.6934 22.9693 19.6879 22.9693C18.6824 22.9693 17.6867 22.7712 16.7578 22.3864C15.8288 22.0016 14.9848 21.4376 14.2738 20.7266C13.9842 20.4154 13.8265 20.004 13.8338 19.5789C13.8411 19.1539 14.013 18.7482 14.3132 18.4472C14.6142 18.147 15.0199 17.9751 15.4449 17.9678C15.87 17.9604 16.2814 18.1182 16.5926 18.4078C16.9986 18.8151 17.481 19.1383 18.0122 19.3588C18.5433 19.5793 19.1128 19.6928 19.6879 19.6928C20.263 19.6928 20.8324 19.5793 21.3636 19.3588C21.8948 19.1383 22.3772 18.8151 22.7832 18.4078L28.252 12.9391C29.0329 12.1101 29.4603 11.0095 29.4433 9.87075C29.4264 8.73197 28.9664 7.6446 28.1611 6.83927C27.3558 6.03395 26.2684 5.57403 25.1296 5.55707C23.9909 5.54011 22.8903 5.96744 22.0613 6.74843L19.327 9.48281C19.0158 9.77245 18.6044 9.93018 18.1793 9.92283C17.7543 9.91549 17.3486 9.74365 17.0476 9.44343C16.7474 9.14242 16.5755 8.73675 16.5682 8.31169C16.5608 7.88662 16.7186 7.47525 17.0082 7.16406ZM6.74883 28.2516C7.15485 28.6588 7.63727 28.982 8.16843 29.2025C8.69958 29.423 9.26904 29.5365 9.84414 29.5365C10.4192 29.5365 10.9887 29.423 11.5199 29.2025C12.051 28.982 12.5334 28.6588 12.9395 28.2516L15.6738 25.5172C15.985 25.2275 16.3964 25.0698 16.8215 25.0772C17.2465 25.0845 17.6522 25.2563 17.9532 25.5566C18.2534 25.8576 18.4253 26.2632 18.4326 26.6883C18.4399 27.1134 18.2822 27.5247 17.9926 27.8359L15.2582 30.5703C14.5472 31.2813 13.7032 31.8453 12.7742 32.2301C11.8453 32.6148 10.8496 32.8129 9.84414 32.8129C7.81347 32.8129 5.86598 32.0062 4.43008 30.5703C2.99418 29.1344 2.1875 27.1869 2.1875 25.1562C2.1875 23.1256 2.99418 21.1781 4.43008 19.7422L9.89883 14.2734C10.6098 13.5624 11.4538 12.9984 12.3828 12.6136C13.3117 12.2288 14.3074 12.0307 15.3129 12.0307C16.3184 12.0307 17.314 12.2288 18.243 12.6136C19.1719 12.9984 20.016 13.5624 20.727 14.2734C21.0166 14.5846 21.1743 14.996 21.167 15.4211C21.1596 15.8461 20.9878 16.2518 20.6876 16.5528C20.3866 16.853 19.9809 17.0249 19.5558 17.0322C19.1308 17.0396 18.7194 16.8818 18.4082 16.5922C18.0022 16.1849 17.5198 15.8617 16.9886 15.6412C16.4574 15.4207 15.888 15.3072 15.3129 15.3072C14.7378 15.3072 14.1683 15.4207 13.6372 15.6412C13.106 15.8617 12.6236 16.1849 12.2176 16.5922L6.74883 22.0609C6.34153 22.467 6.01838 22.9494 5.79788 23.4805C5.57738 24.0117 5.46388 24.5811 5.46388 25.1562C5.46388 25.7313 5.57738 26.3008 5.79788 26.832C6.01838 27.3631 6.34153 27.8455 6.74883 28.2516Z" fill="#111111"/>
+                      </svg></a>
+                  </div>
+                </div>
+              <div class="project-card">
+                <div class="project-image">
+                  <img class="mobile-screen" src="./images/space-force-screenshot.png" alt="">
+                  <img class="small-tablet-screen" src="./images/advice-generator-screenshot copy.png" alt="">
+                </div>
+                <h3 class="project-title">Advice Generator</h3>
+                <div class="line"></div>
+                <div class="project-description">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
+                </div>
+                <div class="tech-stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>API</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" aria-label="Github Link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path d="M17.5003 2.91667C15.5852 2.91667 13.6889 3.29388 11.9195 4.02676C10.1502 4.75964 8.54254 5.83384 7.18835 7.18803C4.45345 9.92294 2.91699 13.6323 2.91699 17.5C2.91699 23.9458 7.10241 29.4146 12.892 31.3542C13.6212 31.4708 13.8545 31.0188 13.8545 30.625V28.1604C9.81491 29.0354 8.95449 26.2063 8.95449 26.2063C8.28366 24.5146 7.33574 24.0625 7.33574 24.0625C6.00866 23.1583 7.43783 23.1875 7.43783 23.1875C8.89616 23.2896 9.66908 24.6896 9.66908 24.6896C10.9378 26.9063 13.0816 26.25 13.9128 25.9C14.0441 24.9521 14.4232 24.3104 14.8316 23.9458C11.5941 23.5813 8.19616 22.3271 8.19616 16.7708C8.19616 15.1521 8.75033 13.8542 9.69824 12.8188C9.55241 12.4542 9.04199 10.9375 9.84408 8.96876C9.84408 8.96876 11.0691 8.57501 13.8545 10.4563C15.0066 10.1354 16.2607 9.97501 17.5003 9.97501C18.7399 9.97501 19.9941 10.1354 21.1462 10.4563C23.9316 8.57501 25.1566 8.96876 25.1566 8.96876C25.9587 10.9375 25.4482 12.4542 25.3024 12.8188C26.2503 13.8542 26.8045 15.1521 26.8045 16.7708C26.8045 22.3417 23.392 23.5667 20.1399 23.9313C20.6649 24.3833 21.1462 25.2729 21.1462 26.6292V30.625C21.1462 31.0188 21.3795 31.4854 22.1232 31.3542C27.9128 29.4 32.0837 23.9458 32.0837 17.5C32.0837 15.5849 31.7065 13.6885 30.9736 11.9192C30.2407 10.1499 29.1665 8.54222 27.8123 7.18803C26.4581 5.83384 24.8505 4.75964 23.0811 4.02676C21.3118 3.29388 19.4154 2.91667 17.5003 2.91667Z" fill="#111111"/>
+                    </svg></a>
+                    <a href="#" class="external" aria-label="External Link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path d="M17.0082 7.16406L19.7426 4.42968C20.4536 3.7187 21.2976 3.15471 22.2266 2.76993C23.1555 2.38515 24.1512 2.1871 25.1566 2.1871C26.1621 2.1871 27.1578 2.38515 28.0867 2.76993C29.0157 3.15471 29.8597 3.7187 30.5707 4.42968C31.2817 5.14067 31.8457 5.98473 32.2305 6.91367C32.6152 7.84262 32.8133 8.83826 32.8133 9.84374C32.8133 10.8492 32.6152 11.8449 32.2305 12.7738C31.8457 13.7028 31.2817 14.5468 30.5707 15.2578L25.102 20.7266C24.391 21.4376 23.5469 22.0016 22.618 22.3864C21.689 22.7712 20.6934 22.9693 19.6879 22.9693C18.6824 22.9693 17.6867 22.7712 16.7578 22.3864C15.8288 22.0016 14.9848 21.4376 14.2738 20.7266C13.9842 20.4154 13.8265 20.004 13.8338 19.5789C13.8411 19.1539 14.013 18.7482 14.3132 18.4472C14.6142 18.147 15.0199 17.9751 15.4449 17.9678C15.87 17.9604 16.2814 18.1182 16.5926 18.4078C16.9986 18.8151 17.481 19.1383 18.0122 19.3588C18.5433 19.5793 19.1128 19.6928 19.6879 19.6928C20.263 19.6928 20.8324 19.5793 21.3636 19.3588C21.8948 19.1383 22.3772 18.8151 22.7832 18.4078L28.252 12.9391C29.0329 12.1101 29.4603 11.0095 29.4433 9.87075C29.4264 8.73197 28.9664 7.6446 28.1611 6.83927C27.3558 6.03395 26.2684 5.57403 25.1296 5.55707C23.9909 5.54011 22.8903 5.96744 22.0613 6.74843L19.327 9.48281C19.0158 9.77245 18.6044 9.93018 18.1793 9.92283C17.7543 9.91549 17.3486 9.74365 17.0476 9.44343C16.7474 9.14242 16.5755 8.73675 16.5682 8.31169C16.5608 7.88662 16.7186 7.47525 17.0082 7.16406ZM6.74883 28.2516C7.15485 28.6588 7.63727 28.982 8.16843 29.2025C8.69958 29.423 9.26904 29.5365 9.84414 29.5365C10.4192 29.5365 10.9887 29.423 11.5199 29.2025C12.051 28.982 12.5334 28.6588 12.9395 28.2516L15.6738 25.5172C15.985 25.2275 16.3964 25.0698 16.8215 25.0772C17.2465 25.0845 17.6522 25.2563 17.9532 25.5566C18.2534 25.8576 18.4253 26.2632 18.4326 26.6883C18.4399 27.1134 18.2822 27.5247 17.9926 27.8359L15.2582 30.5703C14.5472 31.2813 13.7032 31.8453 12.7742 32.2301C11.8453 32.6148 10.8496 32.8129 9.84414 32.8129C7.81347 32.8129 5.86598 32.0062 4.43008 30.5703C2.99418 29.1344 2.1875 27.1869 2.1875 25.1562C2.1875 23.1256 2.99418 21.1781 4.43008 19.7422L9.89883 14.2734C10.6098 13.5624 11.4538 12.9984 12.3828 12.6136C13.3117 12.2288 14.3074 12.0307 15.3129 12.0307C16.3184 12.0307 17.314 12.2288 18.243 12.6136C19.1719 12.9984 20.016 13.5624 20.727 14.2734C21.0166 14.5846 21.1743 14.996 21.167 15.4211C21.1596 15.8461 20.9878 16.2518 20.6876 16.5528C20.3866 16.853 19.9809 17.0249 19.5558 17.0322C19.1308 17.0396 18.7194 16.8818 18.4082 16.5922C18.0022 16.1849 17.5198 15.8617 16.9886 15.6412C16.4574 15.4207 15.888 15.3072 15.3129 15.3072C14.7378 15.3072 14.1683 15.4207 13.6372 15.6412C13.106 15.8617 12.6236 16.1849 12.2176 16.5922L6.74883 22.0609C6.34153 22.467 6.01838 22.9494 5.79788 23.4805C5.57738 24.0117 5.46388 24.5811 5.46388 25.1562C5.46388 25.7313 5.57738 26.3008 5.79788 26.832C6.01838 27.3631 6.34153 27.8455 6.74883 28.2516Z" fill="#111111"/>
+                    </svg></a>
+                  </div>
+                </div>
+              <div class="project-card">
+                  <div class="project-image">
+                    <a class="mobile-screen" href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
+                    <a href="#" class="small-tablet-screen"><img src="./images/advice-generator-screenshot copy.png" alt=""></a>
+                  </div>
+                  <h3 class="project-title">Title</h3>
+                  <div class="line"></div>
+                  <div class="project-description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
+                  </div>
+                  <div class="tech-stack">
+                    <span>STACK</span>
+                    <span>STACK</span>
+                    <span>STACK</span>
+                    <span>STACK</span>
+                  </div>
+                  <div class="project-links">
+                      <a href="#" aria-label="Github Link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path d="M17.5003 2.91667C15.5852 2.91667 13.6889 3.29388 11.9195 4.02676C10.1502 4.75964 8.54254 5.83384 7.18835 7.18803C4.45345 9.92294 2.91699 13.6323 2.91699 17.5C2.91699 23.9458 7.10241 29.4146 12.892 31.3542C13.6212 31.4708 13.8545 31.0188 13.8545 30.625V28.1604C9.81491 29.0354 8.95449 26.2063 8.95449 26.2063C8.28366 24.5146 7.33574 24.0625 7.33574 24.0625C6.00866 23.1583 7.43783 23.1875 7.43783 23.1875C8.89616 23.2896 9.66908 24.6896 9.66908 24.6896C10.9378 26.9063 13.0816 26.25 13.9128 25.9C14.0441 24.9521 14.4232 24.3104 14.8316 23.9458C11.5941 23.5813 8.19616 22.3271 8.19616 16.7708C8.19616 15.1521 8.75033 13.8542 9.69824 12.8188C9.55241 12.4542 9.04199 10.9375 9.84408 8.96876C9.84408 8.96876 11.0691 8.57501 13.8545 10.4563C15.0066 10.1354 16.2607 9.97501 17.5003 9.97501C18.7399 9.97501 19.9941 10.1354 21.1462 10.4563C23.9316 8.57501 25.1566 8.96876 25.1566 8.96876C25.9587 10.9375 25.4482 12.4542 25.3024 12.8188C26.2503 13.8542 26.8045 15.1521 26.8045 16.7708C26.8045 22.3417 23.392 23.5667 20.1399 23.9313C20.6649 24.3833 21.1462 25.2729 21.1462 26.6292V30.625C21.1462 31.0188 21.3795 31.4854 22.1232 31.3542C27.9128 29.4 32.0837 23.9458 32.0837 17.5C32.0837 15.5849 31.7065 13.6885 30.9736 11.9192C30.2407 10.1499 29.1665 8.54222 27.8123 7.18803C26.4581 5.83384 24.8505 4.75964 23.0811 4.02676C21.3118 3.29388 19.4154 2.91667 17.5003 2.91667Z" fill="#111111"/>
+                      </svg></a>
+                      <a href="#" class="external" aria-label="External Link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+                        <path d="M17.0082 7.16406L19.7426 4.42968C20.4536 3.7187 21.2976 3.15471 22.2266 2.76993C23.1555 2.38515 24.1512 2.1871 25.1566 2.1871C26.1621 2.1871 27.1578 2.38515 28.0867 2.76993C29.0157 3.15471 29.8597 3.7187 30.5707 4.42968C31.2817 5.14067 31.8457 5.98473 32.2305 6.91367C32.6152 7.84262 32.8133 8.83826 32.8133 9.84374C32.8133 10.8492 32.6152 11.8449 32.2305 12.7738C31.8457 13.7028 31.2817 14.5468 30.5707 15.2578L25.102 20.7266C24.391 21.4376 23.5469 22.0016 22.618 22.3864C21.689 22.7712 20.6934 22.9693 19.6879 22.9693C18.6824 22.9693 17.6867 22.7712 16.7578 22.3864C15.8288 22.0016 14.9848 21.4376 14.2738 20.7266C13.9842 20.4154 13.8265 20.004 13.8338 19.5789C13.8411 19.1539 14.013 18.7482 14.3132 18.4472C14.6142 18.147 15.0199 17.9751 15.4449 17.9678C15.87 17.9604 16.2814 18.1182 16.5926 18.4078C16.9986 18.8151 17.481 19.1383 18.0122 19.3588C18.5433 19.5793 19.1128 19.6928 19.6879 19.6928C20.263 19.6928 20.8324 19.5793 21.3636 19.3588C21.8948 19.1383 22.3772 18.8151 22.7832 18.4078L28.252 12.9391C29.0329 12.1101 29.4603 11.0095 29.4433 9.87075C29.4264 8.73197 28.9664 7.6446 28.1611 6.83927C27.3558 6.03395 26.2684 5.57403 25.1296 5.55707C23.9909 5.54011 22.8903 5.96744 22.0613 6.74843L19.327 9.48281C19.0158 9.77245 18.6044 9.93018 18.1793 9.92283C17.7543 9.91549 17.3486 9.74365 17.0476 9.44343C16.7474 9.14242 16.5755 8.73675 16.5682 8.31169C16.5608 7.88662 16.7186 7.47525 17.0082 7.16406ZM6.74883 28.2516C7.15485 28.6588 7.63727 28.982 8.16843 29.2025C8.69958 29.423 9.26904 29.5365 9.84414 29.5365C10.4192 29.5365 10.9887 29.423 11.5199 29.2025C12.051 28.982 12.5334 28.6588 12.9395 28.2516L15.6738 25.5172C15.985 25.2275 16.3964 25.0698 16.8215 25.0772C17.2465 25.0845 17.6522 25.2563 17.9532 25.5566C18.2534 25.8576 18.4253 26.2632 18.4326 26.6883C18.4399 27.1134 18.2822 27.5247 17.9926 27.8359L15.2582 30.5703C14.5472 31.2813 13.7032 31.8453 12.7742 32.2301C11.8453 32.6148 10.8496 32.8129 9.84414 32.8129C7.81347 32.8129 5.86598 32.0062 4.43008 30.5703C2.99418 29.1344 2.1875 27.1869 2.1875 25.1562C2.1875 23.1256 2.99418 21.1781 4.43008 19.7422L9.89883 14.2734C10.6098 13.5624 11.4538 12.9984 12.3828 12.6136C13.3117 12.2288 14.3074 12.0307 15.3129 12.0307C16.3184 12.0307 17.314 12.2288 18.243 12.6136C19.1719 12.9984 20.016 13.5624 20.727 14.2734C21.0166 14.5846 21.1743 14.996 21.167 15.4211C21.1596 15.8461 20.9878 16.2518 20.6876 16.5528C20.3866 16.853 19.9809 17.0249 19.5558 17.0322C19.1308 17.0396 18.7194 16.8818 18.4082 16.5922C18.0022 16.1849 17.5198 15.8617 16.9886 15.6412C16.4574 15.4207 15.888 15.3072 15.3129 15.3072C14.7378 15.3072 14.1683 15.4207 13.6372 15.6412C13.106 15.8617 12.6236 16.1849 12.2176 16.5922L6.74883 22.0609C6.34153 22.467 6.01838 22.9494 5.79788 23.4805C5.57738 24.0117 5.46388 24.5811 5.46388 25.1562C5.46388 25.7313 5.57738 26.3008 5.79788 26.832C6.01838 27.3631 6.34153 27.8455 6.74883 28.2516Z" fill="#111111"/>
+                      </svg></a>
+                  </div>
+                </div>
+              <div class="project-card">
+                  <div class="project-image">
+                    <a class="mobile-screen" href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
+                    <a href="#" class="small-tablet-screen"><img src="./images/advice-generator-screenshot copy.png" alt=""></a>
                   </div>
                   <h3 class="project-title">Title</h3>
                   <div class="line"></div>
@@ -87,84 +165,6 @@
               
               
               
-              <div class="project-card">
-                  <div class="project-image">
-                    <a href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
-                  </div>
-                  <h3 class="project-title">Title</h3>
-                  <div class="line"></div>
-                  <div class="project-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
-                    <div class="project-links">
-                      <a href="#" aria-label="Github Link" target="_blank"></a>
-                      <a href="#" class="external" aria-label="External Link" target="_blank"></a>
-                    </div>
-                  </div>
-              </div>
-              
-              
-              <div class="project-card">
-                  <div class="project-image">
-                    <a href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
-                  </div>
-                  <h3 class="project-title">Title</h3>
-                  <div class="line"></div>
-                  <div class="project-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
-                    <div class="project-links">
-                      <a href="#" aria-label="Github Link" target="_blank"></a>
-                      <a href="#" class="external" aria-label="External Link" target="_blank"></a>
-                    </div>
-                  </div>
-              </div>
-            </div>
-              <div class="col">
-
-                
-                <div class="project-card">
-                  <div class="project-image">
-                    <a href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
-                  </div>
-                  <h3 class="project-title">Title</h3>
-                  <div class="line"></div>
-                  <div class="project-description">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
-                    <div class="project-links">
-                      <a href="#" aria-label="Github Link" target="_blank"></a>
-                      <a href="#" class="external" aria-label="External Link" target="_blank"></a>
-                    </div>
-                  </div>
-              </div>
-              
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <a href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
-                </div>
-                <h3 class="project-title">Title</h3>
-                <div class="line"></div>
-                <div class="project-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
-                  <div class="project-links">
-                    <a href="#" aria-label="Github Link" target="_blank"></a>
-                    <a href="#" class="external" aria-label="External Link" target="_blank"></a>
-                  </div>
-                </div>
-              </div>
-              
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <a href="#" target="_blank"><img src="./images/blue-blaster-long.jpg" alt=""></a>
-                </div>
-                <h3 class="project-title">Title</h3>
-                <div class="line"></div>
-                <div class="project-description">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque voluptatum quibusdam minima. Eveniet, repellat harum provident illum quibusdam sint.</p>
-                  <div class="project-links">
-                    <a href="#" aria-label="Github Link" target="_blank"></a>
-                    <a href="#" class="external" aria-label="External Link" target="_blank"></a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -172,8 +172,32 @@
 
         </section>
 
-        <section class="section contact-section">
+        <section id="contact" class="section">
           <h2 class="section-heading">Contact</h2>
+          <section class="container " id="contact">
+            <form class="contact-me contact-section" novalidate>
+              <label class="f name name-item">
+                Name
+                <input type="text" name="name" value="" placeholder="Name">
+                <div class="error-message hidden">
+                  I'm an error!
+                </div>
+              </label>
+              <label for="email" class="email-item">
+                Email Address
+                <div class="error-message hidden">
+                  I'm an error!
+                </div>
+                <input type="text" name="email Address" value="" placeholder="Email">
+              </label>
+              <label for="message" class="message-item">
+                Message
+                <div class="error-message hidden"></div>
+                <textarea class="input-message" name="message" value="" placeholder="Enter your message here"></textarea>
+              </label>
+              <button type="submit" class="sendBtn submit-item" name="send">Submit</button>
+            </form>
+          </section>
         </section>
         
         <!-- <section id="projects1" class="projects-section">
@@ -249,6 +273,13 @@
 
     </main>
     <footer>
+      <div class="socials">
+        <a href="www.github.com/nataliesmyth" class="icon"></a>
+        <a href="https://www.frontendmentor.io/profile/nataliesmyth" class="icon"></a>
+        <a href="#" class="icon"></a>
+        <a href="#" class="icon"></a>
+        <a href="#" class="icon"></a>
+      </div>
       <p><span class="copyright">&copy;</span>
         2023 Natalie Smyth</p>
     </footer>
