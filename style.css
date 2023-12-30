@@ -86,6 +86,35 @@ html {
     scroll-behavior: smooth;
 }
 
+/*** ACCESSIBILITY ***/
+
+.sr-only {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background: hsl( var(--clr-white) );
+    color: hsl( var(--clr-dark) );
+    padding: .5em 1em;
+    margin-inline: auto;
+    transform: translateY(-100%);
+    transition: 250ms ease-in;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
+}
+
 /*** BASE STYLES ***/
 
 body {
@@ -114,6 +143,136 @@ ul {
 
 /*** NAVIGATION/HEADER ***/
 
+/* primary-header */
+
+.logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem)
+}
+
+.primary-header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-navigation {
+    --gap: clamp(1rem, 3vw, 5rem);
+    /* --underline-gap: 2rem; */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl( var(--clr-dark) / .95);
+}
+
+.mobile-nav-toggle{
+    /* display: none; */
+}
+
+@supports (backdrop-filter: blur(1.5rem)) {
+    .primary-navigation {
+        background: hsl( var(--clr-white) / .05);
+        backdrop-filter: blur(1.5rem);
+    }
+}
+
+@media (max-width: 35rem) {
+    .primary-navigation {
+        /* --underline-gap: .5rem; */
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out
+    }
+
+    .primary-navigation[data-visible='true'] {
+        transform: translateX(0);
+        /* transition-delay: 1s; */
+    }
+
+    .primary-header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .close-nav-btn {
+        position: relative;
+        z-index: 10000;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url(./assets/bars.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+
+    .mobile-nav-toggle[aria-expanded='true'] {
+        background-image: url(./assets/x.svg)
+    }
+
+    /* add white border when using keyboard tab to access mobile nav, but not on */
+    .mobile-nav-toggle:focus-visible {
+        outline: 5px solid white;
+        outline-offset: 5px;
+    }
+}
+
+@media(min-width: 35rem) {
+    .primary-navigation {
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
+}
+
+@media (min-width: 35em) and (max-width: 45em){
+    .primary-navigation{
+        padding-inline: 3rem;
+    }
+    
+    .primary-navigation a > span {
+        display: none;
+    }
+}
+@media (min-width: 45rem){
+    .primary-header::before {
+        content: '';
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 1px;
+        background: hsl( var(--clr-light) / .25);
+        left: 35px;
+        z-index: 1000;
+    }
+    .primary-header {
+        margin-block: 2rem;
+    }
+
+    .primary-header > div {
+        order: -1;
+    }
+
+}
+.primary-navigation a {
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
+}
+
 .header {
     display: flex;
     padding: 0 1.5em;
@@ -127,21 +286,58 @@ ul {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-block-start: 1em;
+    margin-block-start: 1em;  
+}
+
+.mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    right: 3rem;
+    top: 1rem;
+    background: transparent;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-image: url(./assets/bars.svg);
+    background-position: center;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    border: 0;
+}
+
+.primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    list-style: none;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
 }
 
 .nav-list {
     display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    transform: translateX(0);
+    transition: transform 500ms ease-in-out;
 }
 
-.hamburger-menu {
+/* .hamburger-menu {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
     gap: 0.625rem;
-}
+} */
 
 .line {
     width: 100%;
@@ -152,22 +348,22 @@ ul {
 
 
 
-.nav-list a {
-    /* display: block; */
+.nav-link {
     font-size: 1.5rem;
     padding-inline: 1em;
     font-weight: 100;
 }
 
-.nav-list a:hover {
+/* .nav-link:hover {
     padding-bottom: 1rem;
     border-radius: 20%;
-}
+} */
 
 .logo {
     font-size: 2rem;
     font-weight: 700;
     padding: 1rem 0;
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
 }
 
 @media (max-width: 1000px) {
@@ -177,9 +373,6 @@ ul {
         background: #111;
     }
 
-    .nav-list {
-        /* display: none; */
-    }
 }
 
 /*** WELCOME SECTION ***/
@@ -250,7 +443,7 @@ ul {
 /* sections */
 
 .project-grid {
-    display: flex;
+    display: grid;
     padding: 1.5625em 1.5em;
     flex-direction: column;
     align-items: center;
@@ -286,16 +479,23 @@ ul {
 }
 
 .project-image {
-    margin: auto;
-    display: flex;
+    display: inline-grid;
     justify-content: center;
+    overflow: hidden;
+    text-align: center;
 }
 
 .project-card {
+    display: grid;
     margin: auto;
     justify-content: center;
     align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px #585757;
+    max-width: 671px;
 }
+
 .project-card > .line {
     /* width: 20.4375rem; */
     height: 1px;
@@ -337,7 +537,11 @@ ul {
     font-size: 2rem;
 }
 
-@media (min-width: 744px) {
+.mobile-screen {
+    max-width: 100%;
+}
+
+@media (min-width: 600px) {
     .mobile-screen {
         display: none;
     }
@@ -345,9 +549,13 @@ ul {
     .small-tablet-screen {
         display: block;
     }
+
+    .project-grid {
+        margin-inline: 3em;
+    }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
 
     .project-grid {
         display: grid;
@@ -391,8 +599,8 @@ input {
 }
 
 label {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-auto-flow: row;
     gap: 10px;
 }
 
@@ -410,7 +618,7 @@ label {
     height: 158px;
     border-radius: 10px;
     border: 1px solid var(--Davys-Grey, #5E5E5E);
-    
+    padding: 1em;
 }
 
 .sendBtn {
@@ -430,6 +638,22 @@ label {
 }
 
 @media (min-width: 1024px) {
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+    }
+    
+    .cta-btn {
+        background: var(--Chinese-Black, #111);
+        color: var(--White, #FFF);
+        padding: .5em 2.5em;
+        border-radius: 10px;
+    }
+
     .contact-section {
         display: grid;
         justify-content: center;
@@ -476,16 +700,27 @@ footer {
 
 .socials {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 25px;
 }
 
-.icon {
+.icon-bg {
     width: 30px;
     height: 30px;
-    background: var(--Chinese-Black, #111);
+    /* background: var(--Chinese-Black, #111); */
+    position: relative;
+}
+
+.fab {
+    color: #111;;
+} 
+
+.icon {
+    position: absolute;
+    color: #fff;
     border-radius: 50%;
+
 }
 
 footer p {
