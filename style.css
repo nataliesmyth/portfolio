@@ -1,11 +1,9 @@
 
 
 :root {
-    /* --red: #E53D22; */
-    --white: #fcfff7;
-    --gray: #7e7f83;
-    --black: #14110f;
-    /* --yellow: #E2EF70; */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
 }
 
 /* Box sizing rules */
@@ -146,7 +144,9 @@ ul {
 /* primary-header */
 
 .logo {
-    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem)
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+    color: hsl( var(--clr-dark) );
+    text-decoration: none;
 }
 
 .primary-header {
@@ -163,10 +163,6 @@ ul {
     background: hsl( var(--clr-dark) / .95);
 }
 
-.mobile-nav-toggle{
-    /* display: none; */
-}
-
 @supports (backdrop-filter: blur(1.5rem)) {
     .primary-navigation {
         background: hsl( var(--clr-white) / .05);
@@ -176,7 +172,6 @@ ul {
 
 @media (max-width: 35rem) {
     .primary-navigation {
-        /* --underline-gap: .5rem; */
         position: fixed;
         z-index: 1000;
         inset: 0 0 0 30%;
@@ -190,17 +185,11 @@ ul {
 
     .primary-navigation[data-visible='true'] {
         transform: translateX(0);
-        /* transition-delay: 1s; */
     }
 
     .primary-header {
         justify-content: space-between;
         align-items: center;
-    }
-
-    .close-nav-btn {
-        position: relative;
-        z-index: 10000;
     }
 
     .mobile-nav-toggle {
@@ -342,11 +331,9 @@ ul {
 .line {
     width: 100%;
     height: 1px;
-    background: #5E5E5E;
+    background: hsl( var(--clr-dark) );
     margin-block-start: 1.5em;
 }
-
-
 
 .nav-link {
     font-size: 1.5rem;
@@ -370,7 +357,7 @@ ul {
     .hamburger-line {
         width: 45px;
         height: 2px;
-        background: #111;
+        background: hsl( var(--clr-dark) );
     }
 
 }
@@ -394,7 +381,7 @@ ul {
 }
 
 .hero-text {
-    color: var(--Chinese-Black, #111);
+    color: hsl( var(--clr-dark) );
     text-align: center;
     font-family: Inter;
     font-size: 1.3125rem;
@@ -412,21 +399,21 @@ ul {
 
 .hero-btn {
     display: flex;
-    color: var(--Chinese-Black, #111);
+    color: hsl( var(--clr-dark) );
     font-size: 1.5rem;
     font-weight: 300;
     width: 12.625rem;
     padding: 0.1875em 2.1875em;
     justify-content: center;
     align-items: center;
-    border: 1px solid #111;
+    border: 1px solid hsl( var(--clr-dark) );
     border-radius: 0.625rem;
     text-decoration: none;
 }
 
 .hero-btn-dark {
-    background: #111;
-    color: #fcfff7;
+    background: hsl( var(--clr-dark) );
+    color: hsl( var(--clr-white) );
 }
 
 @media (min-width: 744px) {
@@ -454,7 +441,7 @@ ul {
 .section-heading {
     margin-inline: 2em;
     padding-block-end: .5em;
-    color: var(--Chinese-Black, #111);
+    color: hsl( var(--clr-dark) );
     text-align: center;
     font-family: Inter;
     font-size: 2.25rem;
@@ -464,11 +451,11 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid hsl( var(--clr-dark) );
 }
 
 .project-title {
-    color: var(--Chinese-Black, #111);
+    color: hsl( var(--clr-dark) );
     font-family: Inter;
     font-size: 1.5rem;
     font-style: normal;
@@ -492,7 +479,7 @@ ul {
     align-items: center;
     padding: 1em;
     border-radius: 10px;
-    box-shadow: 10px 10px 40px #585757;
+    box-shadow: 10px 5px 40px hsl( var(--clr-dark) );
     max-width: 671px;
 }
 
@@ -593,7 +580,7 @@ ul {
 }
 
 input {
-    border: 1px solid #111;
+    border: 1px solid hsl( var(--clr-dark) );
     border-radius: 10px;
     padding: 0.5em;
 }
@@ -617,13 +604,13 @@ label {
 .input-message {
     height: 158px;
     border-radius: 10px;
-    border: 1px solid var(--Davys-Grey, #5E5E5E);
+    border: 1px solid hsl( var(--clr-dark) / .75 );
     padding: 1em;
 }
 
 .sendBtn {
-    background: var(--Chinese-Black, #111);
-    color: var(--White, #FFF);
+    background: hsl( var(--clr-dark) );
+    color: hsl( var(--clr-white) );
     font-weight: 400;
     padding-block: 0.25em;
     border-radius: 10px;
@@ -648,8 +635,8 @@ label {
     }
     
     .cta-btn {
-        background: var(--Chinese-Black, #111);
-        color: var(--White, #FFF);
+        background: hsl( var(--clr-dark) );
+        color: hsl( var(--clr-white) );
         padding: .5em 2.5em;
         border-radius: 10px;
     }
@@ -708,17 +695,17 @@ footer {
 .icon-bg {
     width: 30px;
     height: 30px;
-    /* background: var(--Chinese-Black, #111); */
+    /* background: hsl( var(--clr-dark) ); */
     position: relative;
 }
 
 .fab {
-    color: #111;;
+    color: hsl( var(--clr-dark) );;
 } 
 
 .icon {
     position: absolute;
-    color: #fff;
+    color: hsl( var(--clr-white) )fff;
     border-radius: 50%;
 
 }
