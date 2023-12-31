@@ -285,17 +285,17 @@ ul {
 }
  @media (max-width: 500px) {
 
-     .primary-navigation {
-         position: fixed;
-         z-index: 1000;
-         inset: 0 0 0 30%;
-         list-style: none;
-         padding: min(20rem, 15vh) 2rem;
-         margin: 0;
-         flex-direction: column;
-         transform: translateX(100%);
-         transition: transform 500ms ease-in-out;
-        }
+.primary-navigation {
+    position: fixed;
+    z-index: 1000;
+    inset: 0 0 0 30%;
+    list-style: none;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+   }
 }
 
 .nav-list {
@@ -321,11 +321,6 @@ ul {
     color: hsl( var(--clr-dark) );
 }
 
-/* .nav-link:hover {
-    padding-bottom: 1rem;
-    border-radius: 20%;
-} */
-
 .logo {
     font-size: 2rem;
     font-weight: 700;
@@ -342,11 +337,18 @@ ul {
     .mobile-nav-toggle {
         display: none;
     }
+
+    .cta-btn {
+        background: hsl( var(--clr-dark) );
+        color: hsl( var(--clr-white) );
+        padding: .25em 2.25em;
+        border-radius: 0.625rem;
+    }
 }
 
 @media (min-width: 35em) and (max-width: 45em){
     .primary-navigation{
-        padding-inline: 3rem;
+        padding-inline-start: 3rem;
     }
     
     .primary-navigation a > span {
@@ -382,6 +384,7 @@ ul {
     font-weight: 400;
     line-height: 2rem;
     margin-inline: .25em;
+    max-width: 50ch;
 }
 
 .hero-btns {
@@ -625,13 +628,6 @@ label {
 
     .nav-list {
         display: flex;
-    }
-    
-    .cta-btn {
-        background: hsl( var(--clr-dark) );
-        color: hsl( var(--clr-white) );
-        padding: .5em 2.5em;
-        border-radius: 0.625rem;
     }
 
     .contact-section {
