@@ -614,6 +614,11 @@ label {
     max-height: 3.125rem;
 }
 
+.section h3,
+.section p {
+    text-align: center;
+}
+
 @media (min-width: 46.5rem) {
     .section-heading {
         margin-inline: 7em;
@@ -642,6 +647,8 @@ label {
             "email message"
             " . submit"
     }
+
+    
 
     .name-item {
         grid-area: name;
