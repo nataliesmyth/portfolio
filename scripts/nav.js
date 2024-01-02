@@ -26,6 +26,7 @@ navToggle.addEventListener('click', () => {
 for (let i = 0; i <= navLink.length; i++) {
     navLink[i].addEventListener('click', () => {
         nav.setAttribute('data-visible', false);
+        navToggle.setAttribute('aria-expanded', false);
     })
 }
 
