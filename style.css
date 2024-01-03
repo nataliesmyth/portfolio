@@ -1,8 +1,11 @@
 
 
 :root {
-    --clr-dark: 230 35% 7%;
-    --clr-light: 231 77% 90%;
+    --clr-dark: 208 18% 21%;
+    --clr-highlight: 346 75% 63%;
+    --clr-green: 81 24% 71%;
+    --clr-gray: 93 11% 84%;
+    --clr-light: 76 35% 94%;
     --clr-white: 0 0% 100%;
 }
 
@@ -190,6 +193,7 @@ ul {
     .primary-header {
         justify-content: space-between;
         align-items: center;
+        font-family: 'Quattrocento', serif;
     }
 
     .mobile-nav-toggle {
@@ -311,14 +315,15 @@ ul {
 .line {
     width: 100%;
     height: 1px;
-    background: hsl( var(--clr-dark) / .25 );
+    background: hsl( var(--clr-green) );
     margin-block-start: 1.5em;
 }
 
 .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     padding-inline: 1em;
     color: hsl( var(--clr-dark) );
+    text-transform: uppercase;
 }
 
 .logo {
@@ -339,10 +344,11 @@ ul {
     }
 
     .cta-btn {
-        background: hsl( var(--clr-dark) );
+        background: hsl( var(--clr-highlight) );
         color: hsl( var(--clr-white) );
-        padding: .25em 2.25em;
+        padding: .5em 2em;
         border-radius: 0.625rem;
+        font-weight: 700;
     }
 }
 
@@ -396,18 +402,20 @@ ul {
     display: flex;
     color: hsl( var(--clr-dark) );
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 700;
     width: 12.625rem;
     padding: 0.1875em 2.1875em;
     justify-content: center;
     align-items: center;
-    border: 0.0625rem solid hsl( var(--clr-dark) );
+    border: 0.25rem solid hsl( var(--clr-dark) );
     border-radius: 0.625rem;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .hero-btn-dark {
-    background: hsl( var(--clr-dark) );
+    border: none;
+    background: hsl( var(--clr-highlight) );
     color: hsl( var(--clr-white) );
 }
 
@@ -611,6 +619,10 @@ label {
     max-height: 3.125rem;
 }
 
+.section h3 {
+    text-transform: uppercase;
+}
+
 .section h3,
 .section p {
     text-align: center;
@@ -670,9 +682,11 @@ label {
 /*** FOOTER ***/
 
 footer {
+    background-color: hsl( var(--clr-highlight) );
     font-weight: 300;
     display: flex;
     justify-content: center;
+    margin-block-start: 1em;
     padding: 2em 2em .5em 2em;
     flex-direction: column;
     gap: .5rem;
@@ -710,6 +724,7 @@ footer {
 }
 
 footer p {
+    color: hsl( var(--clr-light) );
     font-weight: 500;
     text-align: center;
     font-size: .75rem;
