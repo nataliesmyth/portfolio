@@ -150,6 +150,9 @@ ul {
     margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
     color: hsl( var(--clr-dark) );
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 0;
 }
 
 .primary-header {
@@ -193,7 +196,6 @@ ul {
     .primary-header {
         justify-content: space-between;
         align-items: center;
-        font-family: 'Quattrocento', serif;
     }
 
     .mobile-nav-toggle {
@@ -235,6 +237,7 @@ ul {
         left: 35px;
         z-index: 1000;
     }
+
     .primary-header {
         margin-block-end: 2rem;
     }
@@ -326,13 +329,6 @@ ul {
     text-transform: uppercase;
 }
 
-.logo {
-    font-size: 2rem;
-    font-weight: 700;
-    padding: 1rem 0;
-    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
-}
-
 @media (min-width: 500px) {
     .primary-navigation {
         display: flex;
@@ -413,10 +409,21 @@ ul {
     text-transform: uppercase;
 }
 
+.hero-btn:hover {
+    color: hsl( var(--clr-light) );
+    background-color: hsl( var(--clr-dark) );
+}
+
 .hero-btn-dark {
     border: none;
     background: hsl( var(--clr-highlight) );
     color: hsl( var(--clr-white) );
+    border: 0.25rem solid hsl( var(--clr-highlight) );
+}
+
+.hero-btn-dark:hover {
+    color: hsl( var(--clr-highlight) );
+    background-color: hsl( var(--clr-white) );
 }
 
 @media (min-width: 46.5rem) {
