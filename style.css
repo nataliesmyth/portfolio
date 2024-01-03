@@ -117,14 +117,14 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quattrocento Sans', sans-serif;
     font-weight: 400;
     line-height: 1.6;
     /* color: var(--gray); */
 }
 
 h1, h2 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Quattrocento', serif;
     font-weight: 700;
     text-align: center;
     /* width: 100%; */
@@ -378,7 +378,6 @@ ul {
 .hero-text {
     color: hsl( var(--clr-dark) );
     text-align: center;
-    font-family: Inter;
     font-size: 1.3125rem;
     font-style: normal;
     font-weight: 400;
@@ -439,7 +438,6 @@ ul {
     padding-block-end: .5em;
     color: hsl( var(--clr-dark) );
     text-align: center;
-    font-family: Inter;
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 400;
@@ -452,7 +450,6 @@ ul {
 
 .project-title {
     color: hsl( var(--clr-dark) );
-    font-family: Inter;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -695,9 +692,15 @@ footer {
     position: relative;
 }
 
-.fab {
+.fab,
+.fem-icon {
     color: hsl( var(--clr-dark) );;
 } 
+
+.fem-icon {
+    width: 32px;
+    height: 32px;
+}
 
 .icon {
     position: absolute;
