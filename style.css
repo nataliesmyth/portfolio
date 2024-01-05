@@ -571,17 +571,18 @@ ul {
 
 }
 
+@media (max-width: 37.5rem) {
+    .abt-blurb {
+    font-size: 2rem;
+    }
+}
+
 @media (max-width: 76.875rem) {
     .abt-blurb {
         padding: 5em 0em;
     }
 }
 
-@media (max-width: 37.5rem) {
-    .abt-blurb {
-    font-size: 2rem;
-    }
-}
 
 /*** CONTACT FORM ***/
 
