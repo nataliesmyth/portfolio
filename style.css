@@ -426,7 +426,7 @@ ul {
     color: hsl( var(--clr-white) );
     border: 0.15rem solid hsl( var(--clr-highlight) );
     border-radius: 0.625rem;
-    margin-block-start: .5em;
+    /* margin-block-start: .5em; */
     padding: 0.45rem;
 }
 
