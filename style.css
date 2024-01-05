@@ -723,6 +723,9 @@ footer {
     position: relative;
 }
 
+.icon-bg:hover {
+    padding-block-end: 1em;
+}
 .fab,
 .fem-icon {
     color: hsl( var(--clr-dark) );;
